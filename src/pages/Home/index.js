@@ -2,17 +2,19 @@ import React from 'react';
 import { View, Text } from 'react-native';
 
 import { Container, SearchContainer, Input, SearchButton } from './styles';
-import { Feather } from '@expo/vector-icons';
 
+import { Feather } from '@expo/vector-icons';
 import Header from '../../components/Header';
+
+
 
 function Home(){
     return(
         <Container>
-            <Header title = "React Prime" />
-            <SearchContainer>
+            <Header title="React Prime" />
+            <SearchContainer> 
                 <Input 
-                    placehodler = "Ex: Vingadores"
+                    placeholder="Ex. Vingadores"
                 />
                 <SearchButton>
                     <Feather name="search" size={30} color="#fff" />

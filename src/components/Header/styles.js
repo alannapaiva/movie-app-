@@ -11,12 +11,12 @@ export const Container = styled.View `
 export const MenuButton = styled.TouchableOpacity`
     height: 70px;
     align-items: center;
-    flex-direction: row;
-`;
+    flex-direction: row; 
+`; 
 
 export const Title = styled.Text`
     color: #fff;
     font-size: 30px;
     font-weight: bold;
-    margin-left: 14px;
+    margin-left: 14px; 
 `;
