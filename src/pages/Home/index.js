@@ -8,11 +8,13 @@ import {
     SearchButton, 
     Title, 
     BannerButton, 
-    Banner 
+    Banner,
+    SliderMovie
 } from './styles';
 
 import { Feather } from '@expo/vector-icons';
 import Header from '../../components/Header';
+import SliderItem from '../../components/SliderItem';
 
 
 function Home(){
@@ -22,6 +24,7 @@ function Home(){
             <SearchContainer> 
                 <Input 
                     placeholder="Ex. Vingadores"
+                    placeholderTextColor = "#ddd"
                 />
                 <SearchButton>
                     <Feather name="search" size={30} color="#fff" />
@@ -37,6 +40,13 @@ function Home(){
                     source={ {uri:'https://poltronanerd.com.br/wp-content/uploads/2018/11/poltrona-Marvel-Studios-The-First-10-Years-Banner.jpg'} }
                     />
                 </BannerButton>
+
+                <SliderMovie
+                    horizontal={true}
+                    data={[1,2,3,4]}
+                    renderItem={ ({ item }) => <SliderItem/>  }
+                />
+
             </ScrollView>
         </Container>
     )
