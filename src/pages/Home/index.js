@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ScrollView } from 'react-native';
+import { ScrollView, ActivityIndicator } from 'react-native';
 
 import { 
     Container, 
@@ -24,6 +24,8 @@ function Home(){
     const [nowMovies, setNowMovies] = useState([]);
     const [popularMovies, setPopularMovies] = useState([]);
     const [topMovies, setTopMovies] = useState([]);
+
+    const [loading, setLoading] = useState(true);
 
     useEffect(()=>{
         let isActive = true;
@@ -62,7 +64,7 @@ function Home(){
         setNowMovies(nowList)
         setPopularMovies(popularList)
         setTopMovies(topList)
-
+        setLoading(false);
 
         }
 
@@ -70,6 +72,13 @@ function Home(){
 
     }, [])
 
+    if(loading){
+        return(
+            <Container>
+                <ActivityIndicator size="large"color="#fff" />
+            </Container>
+        )
+    }
 
     return(
         <Container>
